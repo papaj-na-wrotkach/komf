@@ -110,6 +110,7 @@ data class ProvidersConfig(
     val kodansha: ProviderConfig = ProviderConfig(),
     val viz: ProviderConfig = ProviderConfig(),
     val bookWalker: ProviderConfig = ProviderConfig(),
+    val sevenSeas: ProviderConfig = ProviderConfig(),
 )
 
 @Serializable

@@ -104,6 +104,7 @@ class ConfigLoader {
                     kodansha = kodansha ?: defaultProviders.kodansha,
                     viz = viz ?: defaultProviders.viz,
                     bookWalker = bookWalker ?: defaultProviders.bookWalker,
+                    sevenSeas = defaultProviders.sevenSeas,
                 )
             ),
         )
@@ -139,6 +140,7 @@ class ConfigLoader {
             config.metadataProviders.defaultProviders.kodansha.enabled.not() &&
             config.metadataProviders.defaultProviders.viz.enabled.not() &&
             config.metadataProviders.defaultProviders.bookWalker.enabled.not() &&
+            config.metadataProviders.defaultProviders.sevenSeas.enabled.not() &&
             config.metadataProviders.libraryProviders.isEmpty()
         ) {
             logger.warn { "No metadata providers enabled. You will not be able to get new metadata" }

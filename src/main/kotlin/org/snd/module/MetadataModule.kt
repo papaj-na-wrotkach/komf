@@ -16,6 +16,7 @@ import org.snd.metadata.NameMatchingMode
 import org.snd.metadata.NameSimilarityMatcher
 import org.snd.metadata.comicinfo.ComicInfoWriter
 import org.snd.metadata.model.Provider
+import org.snd.metadata.model.Provider.*
 import org.snd.metadata.providers.anilist.AniListClient
 import org.snd.metadata.providers.anilist.AniListMetadataMapper
 import org.snd.metadata.providers.anilist.AniListMetadataProvider
@@ -375,14 +376,15 @@ class MetadataModule(
 
         fun provider(provider: Provider): MetadataProvider? {
             return when (provider) {
-                Provider.MAL -> mal
-                Provider.MANGA_UPDATES -> mangaupdates
-                Provider.NAUTILJON -> nautiljon
-                Provider.ANILIST -> anilist
-                Provider.YEN_PRESS -> yenPress
-                Provider.KODANSHA -> kodansha
-                Provider.VIZ -> viz
-                Provider.BOOK_WALKER -> bookwalker
+                MAL -> mal
+                MANGA_UPDATES -> mangaupdates
+                NAUTILJON -> nautiljon
+                ANILIST -> anilist
+                YEN_PRESS -> yenPress
+                KODANSHA -> kodansha
+                VIZ -> viz
+                BOOK_WALKER -> bookwalker
+                SEVEN_SEAS -> TODO()
             }
         }
     }
